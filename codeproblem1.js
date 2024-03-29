@@ -29,17 +29,17 @@ function calculateGrade(marks){
  //user input
  //system solves user input problems
 
- function main(){
-    rl.question('What is your mark? ',"", (mark) => {
+ 
+function main(){
+    rl.question('What is your mark? ', (mark) => {
         let s = parseInt(mark);
         if (isNaN(s)){
             console.log("please enter a number \n");
             main()
                 return;}
             let grade=calculateGrade(s)
-            console.log("your grade is", + grade + "\n");
+            console.log("your grade is"+ grade + "\n");
             rl.close();
         });
-
 }
 main()
